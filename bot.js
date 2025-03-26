@@ -7,7 +7,7 @@ config();
 const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 const wss = new WebSocketServer({ port: 8080 });
 
-const TEACHER_USERNAME = "daniarmakyev";
+const TEACHER_USERNAME = process.env.TEACHER_USERNAMEE;
 let activeUsers = new Set();
 
 function isTeacher(ctx) {
